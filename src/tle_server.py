@@ -113,7 +113,7 @@ def return_txyz():
         dt = 0
         while dt <= end_time - start_time:
             x, y, z = calculator.calculate_ra_dec(start_time + dt)[0:3]
-            txyz_list.append([dt, x, y, z])
+            txyz_list.append([dt, x*1000, y*1000, z*1000])
             dt += t_interval
         res[s_id] = txyz_list
     return jsonify(ResultSet=res)
