@@ -162,7 +162,6 @@ class TLECalculator:
         
         #print "r, 緯度, 経度", r, 90-theta*180/pi, phi*180/pi-180
         print "r, 緯度, 経度", r, lat, lng
-        return (X, Y, Z, r, lat, lng)
 
 
     def degree_to_rad(self, degree):
