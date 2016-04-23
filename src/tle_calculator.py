@@ -93,21 +93,20 @@ class TLECalculator:
         rotate_raan = numpy.array([[c_raan, -s_raan, 0],
                                    [s_raan, c_raan, 0],
                                    [0, 0, 1]])
+
         uv0 = numpy.array([[U], [V], [0]])
         xyz = rotate_raan.dot(rotate_i).dot(rotate_ap).dot(uv0)
-        print xyz
         rotate_gw = numpy.array([[c_gw, s_gw, 0],
                                  [-s_gw, c_gw, 0],
                                  [0, 0, 1]])
-        XYZ = rotate_gw.dot(xyz)
 
         # raan だけだと x 軸が春分点を向いた座標系になってしまう（地球が動く）
         # 地球静止系に直すため、春分点と グリニッジ子午線がなす角度も補正する
+        XYZ = rotate_gw.dot(xyz)
 
         X = XYZ[0][0]
         Y = XYZ[1][0]
         Z = XYZ[2][0]
-
         r, theta, phi = self.cartesian_to_polar(X, Y, Z)
 
         lat = 90-theta*180/pi
