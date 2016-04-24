@@ -21,7 +21,7 @@ password = sys.argv[2]
 - 25544: ISS
 - 39084: LANDSAT
 """
-satelite_nums = ["29479", "33492", "39084", "32038"]
+satelite_nums = ["29479", "33492", "39084", "32038", "39244", "36399"]
 
 login_data = {'identity': username, 'password': password}
 base_url = 'https://www.space-track.org/'
