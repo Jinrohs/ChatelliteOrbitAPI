@@ -17,6 +17,11 @@ $ python tle_server.py <Space-Track_username> <Space-Track_password>
 
 - for NLP server
 
+|parameter|description|
+|:--|:--|
+|time|Greenwich Mean Time.|
+|ids|Comma separated NORAD satellite catalog IDs. If not given, information about all satellites in `satelite_nums` list will return.|
+
 sample:
 
 ```
@@ -32,6 +37,12 @@ response:
 ```
 
 - for NodeJS server
+
+|parameter|description|
+|:--|:--|
+|start|Greenwich Mean Time (start).|
+|end|Greenwich Mean Time (end).|
+|ids|Comma separated NORAD satellite catalog IDs. If not given, information about all satellites in `satelite_nums` list will return.|
 
 sample:
 
