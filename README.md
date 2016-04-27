@@ -17,12 +17,32 @@ $ python tle_server.py <Space-Track_username> <Space-Track_password>
 
 - for NLP server
 
+sample:
+
 ```
 
+```
+
+response:
+
+```
+{
+  ResultSet:
+}
 ```
 
 - for NodeJS server
 
+sample:
 
+```
 
-## Response
+```
+
+response:
+
+```
+{
+  ResultSet:
+}
+```
