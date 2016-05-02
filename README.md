@@ -20,7 +20,7 @@ $ python tle_server.py <Space-Track_username> <Space-Track_password>
 |parameter|description|
 |:--|:--|
 |time|Unix Time [sec].|
-|ids|Comma separated NORAD satellite catalog IDs. If not given, information about all satellites in `satelite_nums` list will return.|
+|ids|Comma separated NORAD satellite catalog IDs. If it is not given, information about all satellites in `satelite_nums` list will return.|
 
 sample:
 
@@ -59,7 +59,7 @@ response:
 |:--|:--|
 |start|Unix Time [sec] (start).|
 |end|Unix Time [sec] (end).|
-|ids|Comma separated NORAD satellite catalog IDs. If not given, information about all satellites in `satelite_nums` list will return.|
+|ids|Comma separated NORAD satellite catalog IDs. If it is not given, information about all satellites in `satelite_nums` list will return.|
 
 sample:
 
