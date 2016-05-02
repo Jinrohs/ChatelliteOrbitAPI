@@ -21,7 +21,7 @@ You can get satellites' altitude, latitude, and longitude at specified time.
 
 |parameter|description|
 |:--|:--|
-|time|Unix Time [sec].|
+|time|Unix Time (sec).|
 |ids|Comma separated NORAD satellite catalog IDs. If it is not given, information about all satellites in `satelite_nums` list will return.|
 
 sample:
@@ -59,8 +59,8 @@ You can get satellites' xyz-coordinates from 'start' to 'end'.
 
 |parameter|description|
 |:--|:--|
-|start|Unix Time [sec] (start).|
-|end|Unix Time [sec] (end).|
+|start|Unix Time (sec).|
+|end|Unix Time (sec).|
 |ids|Comma separated NORAD satellite catalog IDs. If it is not given, information about all satellites in `satelite_nums` list will return.|
 
 sample:
@@ -76,10 +76,10 @@ response:
   "ResultSet": {
     "29479": [
       [
-        0,                   # time from 'start' [sec]
-        5670304.7111105882,  # x [m]
-        -1918001.813063388,  # y [m]
-        3741367.3925690977   # z [m]
+        0,                   # time from 'start' (sec)
+        5670304.7111105882,  # x (m)
+        -1918001.813063388,  # y (m)
+        3741367.3925690977   # z (m)
       ], 
       [
         300, 
