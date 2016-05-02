@@ -1,8 +1,8 @@
 # Two Line Element (TLE)
 
-## 1. TLE とは
+## 1. What is TLE ?
 
-人工衛星やデブリなどの現在位置や軌道を計算するのに必要な**軌道要素**というパラメータのの表示形式。2行のデータからなるためこう呼ばれる。
+TLE (Two Line Elements) is a format of parameters called **"orbital elements"**, which are used to calculate orbit of satelites or space debris.
 
 ```
 1 25544U 98067A   16113.11058294  .00003951  00000-0  66475-4 0  9992",
@@ -10,23 +10,25 @@
 ```
 
 
-## 2. 取得方法
+## 2. How to get TLE ?
 
-### 2.1 コマンドラインから
+We get TLE from Space-Track.org through a REST API. We need an access account to use it.
 
-セッションの cookie を取得
+### 2.1 command line
+
+Get cookie for session.
 
 ```
 $ curl -c cookies.txt -b cookies.txt -k https://www.space-track.org/ajaxauth/login -d "identity=myusername&password=mypassword"
 ```
 
-cookie を用いてクエリを叩く
+Send query with cookie.
 
 ```
 $ curl --limit-rate 100K --cookie cookies.txt "https://www.space-track.org/basicspacedata/query/class/tle_latest/ORDINAL/1/NORAD_CAT_ID/123/orderby/TLE_LINE1 ASC/format/tle" > sample.json
 ```
 
-結果：
+Response:
 
 ```
 [
@@ -85,25 +87,23 @@ u'[{"ORDINAL":"1","COMMENT":"GENERATED VIA SPACETRACK.ORG API",...}]
 ```
 
 
-## 3. 参考 HP
+## 3. References
 
 - Space-Track  
 https://www.space-track.org/
-- Space-Track 使い方公式ドキュメント  
+- Space-Track API usage document  
 https://www.space-track.org/documentation#/howto
-- 軌道要素の解説  
-http://www.lizard-tail.com/isana/tle/misc/what_is_tle
-- 軌道要素の解説2  
+- about orbital elements  
+http://www.lizard-tail.com/isana/tle/misc/what_is_tle  
 http://www.jamsat.or.jp/keps/kepmodel.html
-- 人工衛星軌道計算（ブログ）  
+- how to calculate satelites' orbits  
+http://www.infra.kochi-tech.ac.jp/takagi/Geomatics/5Estimation2.pdf  
 http://ameblo.jp/akakituki/entry-10812672360.html
-- 軌道計算  
-http://www.infra.kochi-tech.ac.jp/takagi/Geomatics/5Estimation2.pdf
-- NORAD 衛星カタログ  
+- NORAD satelites catalog  
 http://satellitedebris.net/Database/
-- グリニッジ恒星時（リアルタイムで表示）  
+- Greenwich standard  
 http://eco.mtk.nao.ac.jp/cgi-bin/koyomi/cande/gst.cgi
-- ISS のリアルタイム位置を表示。デバッグに使える。  
+- real time position of ISS.  
 http://www.ncsm.city.nagoya.jp/astro/iss_live.html
 
 
