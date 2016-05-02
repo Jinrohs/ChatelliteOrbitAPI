@@ -15,7 +15,9 @@ $ python tle_server.py <Space-Track_username> <Space-Track_password>
 
 ## APIs
 
-- for NLP server
+### for NLP server
+
+You can get satellites' altitude, latitude, and longitude at specified time.
 
 |parameter|description|
 |:--|:--|
@@ -51,9 +53,9 @@ response:
 
 
 
+### for NodeJS server
 
-
-- for NodeJS server
+You can get satellites' xyz-coordinates from 'start' to 'end'.
 
 |parameter|description|
 |:--|:--|
